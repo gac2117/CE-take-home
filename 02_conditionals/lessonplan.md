@@ -1,13 +1,13 @@
 # Lesson Plan for Golang - Conditionals
 
-This lesson assumes students already have some knowledge of Go basic data types, variables, functions, logical operators.
+This lesson assumes students already have some knowledge of Go basic data types, variables, functions, and logical operators.
 
 ## Materials
 
 - Lesson plan
 - Text editor that is projected on a screen
-- In-class example
-- Coding activity
+- In-class examples
+- Coding activities
 
 ## Instructor Demo (5 mins)
 
@@ -403,45 +403,65 @@ switch language {
 
 > Next we build our cases. For the first case, I'll just use what my variable is set at right now, which is French. I know that the French word for hello is "Bonjour".
 
-#### Type:
+#### Add on to the code:
 
 ```golang
-return "I am " + age + " years old."
-```
-
-#### Say:
-
-> Again you need to make sure that the string is formatted correctly with all the spaces in between the words. So the final function looks like this.
-
-#### Type:
-
-```golang
-func age(birthyear int) string {
-	age := strconv.Itoa(2020 - birthyear)
-	return "I am " + age + " years old."
+switch language {
+	case "French":
+    fmt.Println("Bonjour!")
 }
 ```
 
 #### Say:
 
-> Now to print everything out, we need to call these functions in the main function. Remember we had to use different parameters for each of the three times we call these functions.
+> Now I just need to add two more languages, so I can copy and paste that section down, and change the language and greetings.
 
-#### Type:
+#### Add on to the code:
 
 ```golang
-func main() {
-	fmt.Println(greeting("John", "New York City", "banker"))
-	fmt.Println(age(1980))
-	fmt.Println(greeting("Sam", "Miami", "surfer"))
-	fmt.Println(age(1991))
-	fmt.Println(greeting("Jane", "San Francisco", "software developer"))
-	fmt.Println(age(1986))
+switch language {
+	case "French":
+		fmt.Println("Bonjour!")
+	case "Korean":
+		fmt.Println("An-nyoung!")
+	case "Japanese":
+    fmt.Println("Konnichiwa!")
 }
 ```
+
+#### Say:
+
+> Perfect! Finally we need to have a default case, just in case the language isn't one of the three you chose. So let's add the default case and have it return "Hello" in English.
+
+#### Add on to the code:
+
+```golang
+	switch language {
+	case "French":
+		fmt.Println("Bonjour!")
+	case "Korean":
+		fmt.Println("An-nyoung!")
+	case "Japanese":
+		fmt.Println("Konnichiwa!")
+	default:
+		fmt.Println("Hello!")
+	}
+```
+
+#### Say:
+
+> Alright now let's test it out by changing the language to "Korean"
 
 #### Execute the code so students can see results printed in the console.
 
 #### Say:
 
-> The results look like three different people giving their self-introductions!
-> As you can see, using functions will help us do the same task multiple times easily. We will continue to use functions all throughout this course. They will become more and more complex but this is a good start.
+> Let's try a language that isn't one of the three cases, like "German".
+
+#### Execute the code so students can see results printed in the console.
+
+#### Say:
+
+> Does anyone have any questions?
+
+> Conditional statements are crucial in programming and is used in any programming language you may learn in the future. What we learned today was just the basics. These can become very complex, but as long as you can understand the logical flow of information, you will be able to use it in your code.
