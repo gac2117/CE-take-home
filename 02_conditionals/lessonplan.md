@@ -1,6 +1,6 @@
 # Lesson Plan for Golang - Conditionals
 
-This lesson assumes students already have some knowledge of Go basic data types, variables, functions.
+This lesson assumes students already have some knowledge of Go basic data types, variables, functions, logical operators.
 
 ## Materials
 
@@ -251,7 +251,7 @@ if x > 10 {
 
 #### Say:
 
-> Now you are going to write a few conditional statements on your own. Open up the assignment and you will see instructions on what kind of conditionals you will need to write. You have 15 minutes to complete the assignment.
+> Now you are going to write a few conditional statements on your own. Open up the assignment and you will see instructions on what kind of conditionals you will need to write. You have 20 minutes to complete the assignment.
 
 As the students are coding, walk around the classroom to make sure no one is stuck.
 
@@ -259,88 +259,149 @@ As the students are coding, walk around the classroom to make sure no one is stu
 
 #### Say:
 
-> That was a simple assignment. How did you do? Would anyone like to share their solution code?
+> How did you do? Would anyone like to share their solution code?
 
 See if there are any volunteers. Have the student read their code aloud as you code it into your text editor for everyone to see. Execute the code to see if it works. Thank the student who volunteered.
 
 #### Say:
 
-> Let's go over the solution code together. First of all, we have the function called 'greeting' that accepts 3 parameters. You can name the parameters whatever you want but make sure they are strings.
+> For these exercises, there could be multiple ways to express the condition, so if you have something that looks different from the way I'm coding it here, please share!
+
+> For the first question, we need to determine whether the number is an even number. One way we can do this is by dividing it by 2 and checking if there is any remainder. If there isn't, then it is an even number.
 
 #### Type:
 
 ```golang
-func greeting(name string, city string, job string)
+	x := 51
+
+	if x%2 == 0 {
+		fmt.Println("This is an even number")
+	} else {
+		fmt.Println("This is an odd number")
+	}
 ```
 
 #### Say:
 
-> While it is perfectly fine to write the parameters like this, I will show you a cleaner way to write them.
+> Your variable doesn't have to be x; it can be anything.
+
+> The way we can check for remainders is by using the modulus operator %, which is the percent sign. So here we are checking if x has any remainder when it is divided by 2. If there isn't any, then it prints out "This is an even number". Otherwise we can assume it is an odd number. You can test it out by plugging in other numbers for x.
+
+> Next we worked on the 24-hour clock. Again you can call your variable whatever you'd like. I called it 'hour'.
+
+> The first condition we want to check is whether the hour is between 6 and 12. In order to do this, we would need to use Logical AND Operator, which is represented by two ampersands &&, as well as the math symbols for greater than >, lesser than <, and equal to =.
 
 #### Type:
 
 ```golang
-func greeting(name, city, job string)
+	hour := 7
+
+	if hour >= 6 && hour <= 12 {
+		fmt.Println("Good morning!")
+	}
 ```
 
 #### Say:
 
-> As you can see, you can list the parameters separated by commas as long as they are of the same type.
-> Next we need to specify that the return value will be a string.
+> I have my variable 'hour' set to 7, and my 'if statement' is checking whether 'hour' is greater than or equal to 6 as well as less than or equal to 12.
 
-#### Type:
+> Since my 'hour' variable is set at 7 right now, let's execute this to see if it will print out 'Good morning!"
+
+#### Execute the code so it prints out the output, "Good morning!"
+
+#### Say:
+
+> Perfect! So next we want to check for another condition, so we need to use the keywords `else if` and then write the condition we are checking for. In this case, let's check for the afternoon hours.
+
+#### Add on to the code:
 
 ```golang
-func greeting(name, city, job string) string
+else if hour >= 13 && hour <= 18 {
+		fmt.Println("Good afternoon!")
+	}
 ```
 
 #### Say:
 
-> Open the curly brackets and return the concatenated string. Make sure to have spaces in between the words!
+> Here we are checking, if 'hour' wasn't between 6 and 12, then let's check if it's greater than or equal to 13 and less than or equal to 18. If it is, then it should print out "Good afternoon!"
+
+> Let's change the 'hour' variable to 15 and execute the code.
+
+#### Execute the code so it prints out the output, "Good afternoon!"
+
+#### Say:
+
+> Good! It's working so far. Now one way we can check for the other two conditions is by choosing which one is easier to check for. I think it is easier to check whether the 'hour' is invalid, meaning it is greater than 24. So that's what my next `else if` expression is checking for.
 
 #### Type:
 
 ```golang
-func greeting(name, city, job string) string {
-	return "Hello, my name is " + name + ". I live in " + city + " and I am a " + job + "."
+else if hour >= 24 {
+		fmt.Println("Please use a number between 0 and 23")
+	}
+```
+
+#### Say:
+
+> Let's go ahead an change the 'hour' variable to a bigger number, like 30, and execute the code.
+
+#### Execute the code so it prints out the output, "Please use a number between 0 and 23"
+
+#### Say:
+
+> Alright, finally we will check for the last condition, which is whether the hour is between 0 and 5 or 19 and 23. That would've been harder to code using logical operators, so let's just use the `else` statement for that.
+
+#### Type:
+
+```golang
+else {
+		fmt.Println("Good night!")
+	}
+```
+
+#### Say:
+
+> Let's test this out and change the 'hour' variable to 20 and execute the code.
+
+#### Execute the code so it prints out the output, "Good night!"
+
+#### Say:
+
+> Like I said before, there are other ways you can code this and still have it run perfectly fine. Does anyone have a different way they coded it?
+
+See if there are any volunteers. Have them share their code and see different ways of making this work.
+
+#### Say:
+
+> See? This is the beauty of coding. There are many ways to do the same thing. You can be creative and go about it in different ways. However, one thing we want to strive for is to be concise.
+
+> Have you heard of DRY? It stands for "Don't Repeat Yourself" and basically you want to code so that you're not being repetitive and unnecessarily long in your coding.
+
+> Anyway for the last exercise, it required a little bit of outside knowledge regarding world languages. If you couldn't think of any off the top of your head, you were welcome to use Google Translate.
+
+> First we need to declare a variable, which I called language, and set it to any language.
+
+#### Type:
+
+```golang
+language := French
+```
+
+#### Say:
+
+> Next we need to set up the switch statement. So first we use the keyword `switch` and then whatever we are checking for, which is the language.
+
+#### Type:
+
+```golang
+switch language {
+
 }
 ```
 
 #### Say:
 
-> For the next function, you had to use an integer converter to change the number into a string. But first, we need to declare the function
-
-#### Type:
-
-```golang
-func age(birthyear int) string {
-
-}
-```
-
-#### Say:
-
-> There are different ways you can do this, but the simplest way is to declare the variable 'age' and set it to the difference between the birth year and the current year. So that can be done with simple subtraction
-
-#### Type:
-
-```golang
-age := 2020 - birthyear
-```
-
-#### Say:
-
-> However, if we do this, the age is an integer and we cannot print an integer in a string. So we need to convert this integer into a string, using `strconv.Itoa()`
-
-#### Type:
-
-```golang
-age := strconv.Itoa(2020-birthyear)
-```
-
-#### Say:
-
-> Finally we need to return the string that includes this age.
+> Next we build our cases. For the first case, I'll just use what my variable is set at right now, which is French. I know that the French word for hello is "Bonjour".
 
 #### Type:
 

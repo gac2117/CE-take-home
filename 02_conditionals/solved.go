@@ -6,6 +6,7 @@ func main() {
 	// Create a if/else statement that will take in one parameter of a number. Declare and assign the variable.
 	// If the number is an even number, print out the message "This is an even number".
 	// If the number is an odd number, print out the message "This is an odd number".
+
 	x := 51
 
 	if x%2 == 0 {
@@ -21,6 +22,7 @@ func main() {
 	// If the number is above 23, print out the message "Please use a number between 0 and 23"
 
 	hour := 25
+
 	if hour >= 6 && hour <= 12 {
 		fmt.Println("Good morning!")
 	} else if hour >= 13 && hour <= 18 {
@@ -35,6 +37,7 @@ func main() {
 	// Choose three languages that you know how to say "Hello" in. You can use Google Translator if needed.
 	// Create a case for each of the three language and have it print out "Hello!" in that language.
 	// The default case can return "Hello!" in English.
+
 	language := "French"
 
 	switch language {
