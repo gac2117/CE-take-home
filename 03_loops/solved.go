@@ -3,41 +3,27 @@ package main
 import "fmt"
 
 func main() {
-	// Long method
-	// i := 1
-	// for i <= 10 {
-	// 	fmt.Println(i)
-	// 	i++
-	// }
+	// Create a for loop that will print out the sum of the numbers between 15 and 25.
+	// Hint: declare a variable called 'sum' outside of the for loop to keep track of the sum
 
-	// Short method
-	// for i := 1; i <= 10; i++ {
-	// 	fmt.Printf("Number %d\n", i)
-	// }
+	sum := 0
 
-	// Fizzbuzz
-	// for i := 1; i <= 50; i++ {
-	// 	if i%15 == 0 {
-	// 		fmt.Println("FizzBuzz")
-	// 	} else if i%3 == 0 {
-	// 		fmt.Println("Fizz")
-	// 	} else if i%5 == 0 {
-	// 		fmt.Println("Buzz")
-	// 	} else {
-	// 		fmt.Println(i)
-	// 	}
-	// }
+	for i := 15; i < 26; i++ {
+		sum += i
+	}
 
-	// Odd, Even, Prime
-	for i := 1; i <= 50; i++ {
-		if i%2 != 0 {
-			fmt.Println("Odd number")
-		} else if i%10 == 0 {
-			fmt.Println("tens")
-		} else if i%5 == 0 {
-			fmt.Println("Buzz")
+	fmt.Println(sum)
+
+	// Create a for loop that will print out numbers 1 to 30
+	// If the number is divisible by 4, print out the word "FizzBuzz" instead of the number.
+	// Hint: Use a if/else statement inside of the for loop.
+
+	for i := 1; i <= 30; i++ {
+		if i%4 == 0 {
+			fmt.Println("FizzBuzz")
 		} else {
 			fmt.Println(i)
 		}
 	}
+
 }
