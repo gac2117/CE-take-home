@@ -13,6 +13,8 @@ This lesson assumes students already have some knowledge of Go basic data types,
 
 The lesson plan format is divided into two parts: speaking and coding. For some parts, it is advised that the instructor will code as s/he is speaking.
 
+### **If/Else Statements**
+
 #### Say:
 
 > Conditional statements tell a program to execute different actions depending on whether a condition is true or false.
@@ -58,13 +60,15 @@ func main() {
 }
 ```
 
-#### Execute the code so students can see "x is equal to 5" printed in the console.
+#### Execute the code so students can see the output, "x is equal to 5", printed in the console.
 
 #### Say:
 
 > Now let's change x to a different number, like 7. Then since x is not equal to 5, it should execute that else statement
 
-#### Change the value of x to 7 and execute the code so students can see "x is not equal to 5" printed in the console.
+#### Change the value of x to 7 and execute the code so students can see the output, "x is not equal to 5", printed in the console.
+
+### **Else if statements**
 
 #### Say:
 
@@ -86,21 +90,23 @@ if x > 10 {
 
 #### Say:
 
-> Let's break this down. The first expression is checking if x is greater than 10. If true, then it will print out "x is greater than 10". If false, it will go to the next expression, which is checking if x is less than 10. Again, if true, then it will print out that statement, but if false, it will go to the last expression. The last expression is checking whether x is equal to 10. Let's execute this code and see what we get if we set x to equal 15.
+> Let's break this down.
 
-#### Execute the code with x assigned to 15 so students can see "x is greater than 10" printed in the console.
+> The first expression is checking if x is greater than 10. If true, then it will print out "x is greater than 10". If false, it will go to the next expression, which is checking if x is less than 10. Again, if true, then it will print out that statement, but if false, it will go to the last expression. The last expression is checking whether x is equal to 10. Let's execute this code and see what we get if we set x to equal 15.
+
+#### Execute the code with x assigned to 15 so students can see the output, "x is greater than 10", printed in the console.
 
 #### Say:
 
 > Okay now let's try a number that is less than 10, like 5.
 
-#### Change x to 5 and execute the code so it prints out "x is less than 10".
+#### Change x to 5 and execute the code so it prints out the output, "x is less than 10".
 
 #### Say:
 
 > Now let's set x to equal 10
 
-#### Change x to 10 and execute the code so it prints out "x is equal to 10".
+#### Change x to 10 and execute the code so it prints out the output, "x is equal to 10".
 
 #### Say:
 
@@ -118,11 +124,134 @@ if x > 10 {
 }
 ```
 
-#### Execute the code again with x still assigned to 10 so it prints out "x is equal to 10".
+#### Execute the code again with x still assigned to 10 so it prints out the output, "x is equal to 10".
+
+### **Switch statements**
 
 #### Say:
 
-> Now you are going to write a few functions on your own. Open up the assignment and you will see instructions on what the functions will need to do and return. You have 15 minutes to complete the assignment.
+> But for complex conditionals, it is cleaner to use switch statements. A switch statement will run the first case equal to the condition expression. The cases are evaluated from the top down, and will stop once a case is executed. If none of the cases match, there is a default case that will be executed instead.
+
+> Let's write a switch statement now. Let's say a variable called 'month' is set to the numeric representation of a month. The switch statement will then print out the name of the month.
+
+> To start, we will use the keyword `switch` and then the expression that will be used against the cases. So in our case, it is the month.
+
+#### Type:
+
+```golang
+  switch month {
+
+  }
+```
+
+#### Say:
+
+> To create the different cases, we use the keyword `case` and then the conditional that needs to be evaluated as true.
+
+#### Add on to the code:
+
+```golang
+	switch month {
+	case 1:
+
+	case 2:
+
+	case 3:
+
+	case 4:
+
+	case 5:
+
+	case 6:
+
+	case 7:
+
+	case 8:
+
+	case 9:
+
+	case 10:
+
+	case 11:
+
+	case 12:
+
+	default:
+
+	}
+```
+
+#### Say:
+
+> So in our case, we will need 12 cases to check all the months of the year. And then we need a default case just in case the month variable is set to a number that is not a month, like 0 or 13.
+
+> Now what do we want do if one of these cases are true? We want to print out the name of the month. So in each case, we need to code that.
+
+#### Add on to the code:
+
+```golang
+	switch month {
+	case 1:
+		fmt.Println("January")
+	case 2:
+		fmt.Println("February")
+	case 3:
+		fmt.Println("March")
+	case 4:
+		fmt.Println("April")
+	case 5:
+		fmt.Println("May")
+	case 6:
+		fmt.Println("June")
+	case 7:
+		fmt.Println("July")
+	case 8:
+		fmt.Println("August")
+	case 9:
+		fmt.Println("September")
+	case 10:
+		fmt.Println("October")
+	case 11:
+		fmt.Println("November")
+	case 12:
+		fmt.Println("December")
+	default:
+
+	}
+```
+
+#### Say:
+
+> Now for the default case, if the month variable is set to a number that is not 1-12, then we can print out a message saying "This is not a month".
+
+#### Add on to the code:
+
+```golang
+	default:
+		fmt.Println("This is not a month")
+```
+
+#### Say:
+
+> Let's now declare a variable at the top called month and set it equal to 5. And let's execute the code to see what it prints out.
+
+#### Add on to the code:
+
+```golang
+  month := 5
+```
+
+#### Execute the code so it prints out the output, "May". Change the value of month and execute the code again so it prints out a different output.
+
+#### Say:
+
+> If we change the value of month to a number other than 1-12, it should hit the default case and print out "This is not a month". So let's try that now.
+
+#### Execute the code with month equal to 13 so it prints out the output, "This is not a month".
+
+#### Say:
+
+> Now you are going to write a few conditional statements on your own. Open up the assignment and you will see instructions on what kind of conditionals you will need to write. You have 15 minutes to complete the assignment.
 
 As the students are coding, walk around the classroom to make sure no one is stuck.
 
