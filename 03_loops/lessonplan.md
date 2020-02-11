@@ -31,7 +31,9 @@ for initialization; condition; post{
 
 > Next is the condition statement. It is a boolean expression that is executed before every iteration. It is checking whether we should run the loop again or not. If the boolean expression is true, then the loop executes. If it is false, then it stops.
 
-> Finally there is the post statement. It is executed after every iteration. Let's build a simple `for` loop now.
+> Finally there is the post statement. It is executed after every iteration.
+
+> We separate these statements using a semi-colon ;. Let's build a simple `for` loop now.
 
 #### Type:
 
@@ -117,6 +119,182 @@ As the students are coding, walk around the classroom to make sure no one is stu
 
 #### Say:
 
-> How did you do? Would anyone like to share their solution code?
+> How was it? I know the coding exercises are becoming more challenging as we progress, but that shows how much you've learned so far and what you're capable of doing now!
+
+> Would anyone like to share their code for these exercises?
 
 See if there are any volunteers. Have the student read their code aloud as you code it into your text editor for everyone to see. Execute the code to see if it works. Thank the student who volunteered.
+
+#### Say:
+
+> For the first exercise, the hint tells us to declare a variable called 'sum' outside of the loop. So let's do that first.
+
+#### Type:
+
+```golang
+sum := 0
+
+fmt.Println(sum)
+```
+
+#### Say:
+
+> We will set the sum to zero because nothing has been added yet. Now we want to add the numbers starting with 15. So we will set the initialization statement to `i := 15`.
+
+#### Add on to the code:
+
+```golang
+sum := 0
+
+for i := 15
+
+fmt.Println(sum)
+```
+
+#### Say:
+
+> Next we want to keep looping until we hit 25. That means 'i' needs to be less than 26.
+
+#### Add on to the code:
+
+```golang
+sum := 0
+
+for i := 15; i < 26
+
+fmt.Println(sum)
+```
+
+#### Say:
+
+> So as long as 'i' is less than 26, this loop will continue to run. Finally, after every iteration we will increment 'i' by 1.
+
+#### Add on to the code:
+
+```golang
+sum := 0
+
+for i := 15; i < 26; i++ {
+
+}
+
+fmt.Println(sum)
+```
+
+#### Say:
+
+> Inside the loop, we want to add all the numbers in order. So in the first iteration, 'i' is equal to 15. We will add that to the variable 'sum' which will keep track of our sum.
+
+> In the second iteration, 'i' is equal to 16. When we add that to 'sum' it will become 15 + 16, which is 31. The way we code that is this:
+
+#### Add on to the code:
+
+```golang
+sum := 0
+
+for i := 15; i < 26; i++ {
+  sum += i
+}
+
+fmt.Println(sum)
+```
+
+#### Say:
+
+> Basically it will continue to add all the numbers until we hit 26. We will NOT add 26 to the sum. If we execute this, we see that the sum is 220
+
+#### Execute the code so it prints out the output, 220.
+
+#### Say:
+
+> The next exercise was a variation of a popular coding challenge that is actually given in technical interviews. This is an easier version of it. Usually it involves printing out numbers 1 to 100. Every number divisible by 3 will print out "Fizz", every number divisible by 5 will print out "Buzz", and every number divisible by 15 will print out "FizzBuzz".
+
+> But for our exercise, we only have to print out "FizzBuzz" if the number was divisible by 4. First, let's set up our `for` loop.
+
+#### Type:
+
+```golang
+for i := 1; i<=30; i++ {
+
+}
+```
+
+#### Say:
+
+> We will set 'i' to 1 so it starts printing out the numbers starting with 1. We will keep running the loop until it equals 30. And we will increment 'i' by 1 every time the loop ends.
+
+> Now, the hint tells us we can use an if/else statement inside of the `for` loop, so let's go ahead and set that up.
+
+#### Add on to the code:
+
+```golang
+for i := 1; i<=30; i++ {
+  if {
+
+  } else {
+
+  }
+}
+```
+
+#### Say:
+
+> In order to know if a number is cleanly divisible by another number, the remainder must be 0. We check for this using the modulus operator %.
+
+#### Add on to the code:
+
+```golang
+for i := 1; i<=30; i++ {
+  if i%4 == 0{
+
+  } else {
+
+  }
+}
+```
+
+#### Say:
+
+> We are saying, if we divide 'i' by 4 and there is no remainder, then we know this is cleanly divisible by 4. That means we need to print out "FizzBuzz", so let's add that to the body of the if statement.
+
+#### Add on to the code:
+
+```golang
+for i := 1; i<=30; i++ {
+  if i%4 == 0{
+    fmt.Println("FizzBuzz")
+  } else {
+
+  }
+}
+```
+
+#### Say:
+
+> For the rest of the numbers, we want to just print out the number. So in the body of the else statement, let's do that.
+
+#### Add on to the code:
+
+```golang
+for i := 1; i<=30; i++ {
+  if i%4 == 0{
+    fmt.Println("FizzBuzz")
+  } else {
+    fmt.Println(i)
+  }
+}
+```
+
+#### Say:
+
+> Let's check if this works now!
+
+#### Execute the code so it prints out the output.
+
+#### Say:
+
+> Here we see 1, 2, 3, and then where there should be 4, we have the word "FizzBuzz". Then it continues on 5, 6, 7, and then "FizzBuzz". If you check all the way down, you will see that it printed "FizzBuzz" every 4th time.
+
+> Does anyone have any questions?
+
+> There are different variations of the `for` loop in Golang. For example, if you only give a condition statement, then it will continue to loop through the code until the condition is false. That is also known as the `while` loop. But for our purposes today, we learned about the simple `for` loop.
