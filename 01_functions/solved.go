@@ -7,7 +7,7 @@ import (
 
 // Create a function called 'greeting' that will take in three parameters: name, city, and job title.
 // The function must return a string that says "Hello, my name is ______. I live in ______ and I am a ______."
-func greeting(name string, city string, job string) string {
+func greeting(name, city, job string) string {
 	return "Hello, my name is " + name + ". I live in " + city + " and I am a " + job + "."
 }
 
@@ -24,4 +24,8 @@ func age(birthyear int) string {
 func main() {
 	fmt.Println(greeting("John", "New York City", "banker"))
 	fmt.Println(age(1980))
+	fmt.Println(greeting("Sam", "Miami", "surfer"))
+	fmt.Println(age(1991))
+	fmt.Println(greeting("Jane", "San Francisco", "software developer"))
+	fmt.Println(age(1986))
 }
