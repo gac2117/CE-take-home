@@ -3,13 +3,21 @@ package main
 import "fmt"
 
 func main() {
-	x := 50
-	y := 10
+	z := 7
 
-	if x < y {
-		fmt.Printf("%d is less than %d\n", x, y)
+	if z == 5 {
+		fmt.Println("z is equal to 5")
 	} else {
-		fmt.Printf("%d is less than %d\n", y, x)
+		fmt.Println("z is not equal to 5")
+	}
+
+	x := 10
+	if x > 10 {
+		fmt.Println("x is greater than 10")
+	} else if x < 10 {
+		fmt.Println("x is less than 10")
+	} else {
+		fmt.Println("x is equal to 10")
 	}
 
 	color := "green"
