@@ -135,7 +135,7 @@ The output should be:
 
 > Notice what the loop is doing. First, before the loop executes, 'i' is 0. After the loop executes, 'i' is incremented by 1 so it is 1. That is still less than 5, so the loop executes and prints out 1. Then it is incremented by 1 again, making it 2. That is still less than 5, so the loop executes.
 
-> This keeps repeating until i is no longer less than 5. So that's why it ends with printing out 4.
+> This keeps repeating until 'i' is no longer less than 5. So that's why it ends with printing out 4.
 
 ### **Coding Exercises**
 
