@@ -1,6 +1,6 @@
 # Lesson Plan for Golang - Loops
 
-This lesson assumes students already have some knowledge of Go basic data types, variables, functions, logical operators, conditionals.
+This lesson assumes students already have some knowledge of Go basics, such as basic data types, variables, functions, logical operators, conditionals.
 
 ## Materials
 
@@ -19,6 +19,8 @@ The lesson plan format is divided into two parts: speaking and coding. For some 
 
 > There are many types of loops in programming languages, but in Golang there is only one: the `for` loop. Basically, the `for` loop will repeatedly execute code inside the block for a specific number of times.
 
+### **Syntax of `for` loop**
+
 #### Type the following code in the text editor:
 
 ```golang
@@ -27,15 +29,19 @@ for initialization; condition; post{
 }
 ```
 
-> We start by using the keyword `for` and then the initialization statement. It is a simple statement like variable declarations. It is executed before the first loop or iteration.
+#### As you say:
 
-> Next is the condition statement. It is a boolean expression that is executed before every iteration. It is checking whether we should run the loop again or not. If the boolean expression is true, then the loop executes. If it is false, then it stops.
+> We start by using the keyword `for` and then the initialization statement. This is a simple statement, like variable declarations. It is executed before the first loop or iteration.
 
-> Finally there is the post statement. It is executed after every iteration.
+> Next is the condition statement. This is a boolean expression that is executed before every iteration. It is checking whether we should run the loop again or not. If the boolean expression is true, then the loop executes. If it is false, then it stops.
 
-> We separate these statements using a semi-colon ;. Let's build a simple `for` loop now.
+> Finally there is the post statement. This is executed after every iteration.
 
-#### Type:
+> We separate these statements using a semi-colon (;). Let's build a simple `for` loop now.
+
+### **In-class Example**
+
+#### Change the initialization statement to:
 
 ```golang
 for i := 0; condition; post{
@@ -43,11 +49,11 @@ for i := 0; condition; post{
 }
 ```
 
-#### Say:
+#### As you say:
 
 > For the initialization statement, we are going to declare a variable 'i' and set it to 0. That will serve as our counter.
 
-#### Add on to the code:
+#### Change the condition statement to:
 
 ```golang
 for i := 0; i < 5; post{
@@ -55,11 +61,11 @@ for i := 0; i < 5; post{
 }
 ```
 
-#### Say:
+#### As you say:
 
 > For the condition statement, we are going to run the loop as long as 'i' is less than 5. So basically it will run 5 times.
 
-#### Add on to the code:
+#### Change the post statement to:
 
 ```golang
 for i := 0; i < 5; i++{
@@ -85,13 +91,25 @@ for i := 0; i < 5; post{
 
 > Let's execute this code to see what happens.
 
-#### Execute the code so it prints out the output, "Coding is fun" 5 times.
+#### Execute the code so the students can see the output
+
+The output should be:
+
+Coding is fun!
+
+Coding is fun!
+
+Coding is fun!
+
+Coding is fun!
+
+Coding is fun!
 
 #### Say:
 
 > Okay well let's try to see exactly how this is working. Instead of printing "Coding is fun" 5 times, let's print what the variable 'i' is in every loop.
 
-#### Change the code into:
+#### Change the code to:
 
 ```golang
 for i := 0; i < 5; post{
@@ -99,7 +117,19 @@ for i := 0; i < 5; post{
 }
 ```
 
-#### Execute the code so it prints out the output, 0 1 2 3 4.
+#### Execute the code so students can see the output
+
+The output should be:
+
+0
+
+1
+
+2
+
+3
+
+4
 
 #### Say:
 
@@ -107,13 +137,15 @@ for i := 0; i < 5; post{
 
 > This keeps repeating until i is no longer less than 5. So that's why it ends with printing out 4.
 
+### **Coding Exercises**
+
 #### Say:
 
 > Now you are going to write a couple of `for` loops on your own. One of them is a variation of a very popular coding challenge called "FizzBuzz".
 
 > Open up the assignment and you will see instructions on what kind of `for` loop you will need to write. You have 20 minutes to complete the assignment. If you get stuck, please raise your hand and I will go help you.
 
-As the students are coding, walk around the classroom to make sure no one is stuck.
+As the students are coding, walk around the classroom to make sure no one is struggling.
 
 ## Instructor Review (10 mins)
 
@@ -123,7 +155,9 @@ As the students are coding, walk around the classroom to make sure no one is stu
 
 > Would anyone like to share their code for these exercises?
 
-See if there are any volunteers. Have the student read their code aloud as you code it into your text editor for everyone to see. Execute the code to see if it works. Thank the student who volunteered.
+See if there are any volunteers. Have the student read his/her code aloud as you code it into your text editor for everyone to see. Execute the code to see if it works. Thank the student who volunteered.
+
+### **Sum Exercise**
 
 #### Say:
 
@@ -139,7 +173,7 @@ fmt.Println(sum)
 
 #### Say:
 
-> We will set the sum to zero because nothing has been added yet. Now we want to add the numbers starting with 15. So we will set the initialization statement to `i := 15`.
+> We will set the sum to zero because nothing has been added yet. Now we want to add the numbers starting with 15. So we will set the initialization statement to `i := 15` in our `for` loop.
 
 #### Add on to the code:
 
@@ -201,15 +235,20 @@ fmt.Println(sum)
 
 #### Say:
 
-> Basically it will continue to add all the numbers until we hit 26. We will NOT add 26 to the sum. If we execute this, we see that the sum is 220
+> Basically it will continue to add all the numbers until we hit 26. We will NOT add 26 to the sum. Let's see what the sum of all the numbers between 15 and 25 are.
 
-#### Execute the code so it prints out the output, 220.
+### **Execute the Coding Exercise**
+
+The output should be 220.
+
+### **FizzBuzz Exercise**
 
 #### Say:
 
 > The next exercise was a variation of a popular coding challenge that is actually given in technical interviews. This is an easier version of it. Usually it involves printing out numbers 1 to 100. Every number divisible by 3 will print out "Fizz", every number divisible by 5 will print out "Buzz", and every number divisible by 15 will print out "FizzBuzz".
 
-> But for our exercise, we only have to print out "FizzBuzz" if the number was divisible by 4. First, let's set up our `for` loop.
+> But for our exercise, we only have to print out "FizzBuzz" if the number was divisible by 4.
+> First, let's set up our `for` loop.
 
 #### Type:
 
@@ -219,7 +258,7 @@ for i := 1; i<=30; i++ {
 }
 ```
 
-#### Say:
+#### As you say:
 
 > We will set 'i' to 1 so it starts printing out the numbers starting with 1. We will keep running the loop until it equals 30. And we will increment 'i' by 1 every time the loop ends.
 
@@ -289,12 +328,78 @@ for i := 1; i<=30; i++ {
 
 > Let's check if this works now!
 
-#### Execute the code so it prints out the output.
+#### **Execute the Coding Exercise**
+
+The output should be:
+
+1
+
+2
+
+3
+
+FizzBuzz
+
+5
+
+6
+
+7
+
+FizzBuzz
+
+9
+
+10
+
+11
+
+FizzBuzz
+
+13
+
+14
+
+15
+
+FizzBuzz
+
+17
+
+18
+
+19
+
+FizzBuzz
+
+21
+
+22
+
+23
+
+FizzBuzz
+
+25
+
+26
+
+27
+
+FizzBuzz
+
+29
+
+30
 
 #### Say:
 
 > Here we see 1, 2, 3, and then where there should be 4, we have the word "FizzBuzz". Then it continues on 5, 6, 7, and then "FizzBuzz". If you check all the way down, you will see that it printed "FizzBuzz" every 4th time.
 
 > Does anyone have any questions?
+
+### **Conclusion**
+
+#### Say:
 
 > There are different variations of the `for` loop in Golang. For example, if you only give a condition statement, then it will continue to loop through the code until the condition is false. That is also known as the `while` loop. But for our purposes today, we learned about the simple `for` loop.
