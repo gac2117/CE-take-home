@@ -23,6 +23,8 @@ The lesson plan format is divided into two parts: speaking and coding. For some 
 
 > Let's put that into coding language.
 
+### **In-class Example**
+
 #### Type the following code in the text editor:
 
 ```golang
@@ -60,19 +62,41 @@ func main() {
 }
 ```
 
-#### Execute the code so students can see the output, "x is equal to 5", printed in the console.
+#### Execute the code so students can see the output
+
+The output should be "x is equal to 5"
 
 #### Say:
 
 > Now let's change x to a different number, like 7. Then since x is not equal to 5, it should execute that else statement
 
-#### Change the value of x to 7 and execute the code so students can see the output, "x is not equal to 5", printed in the console.
+#### Change the value of x to 7:
+
+```golang
+func main() {
+  x := 7
+
+  if x == 5 {
+    fmt.Println("x is equal to 5")
+  } else {
+    fmt.Println("x is not equal to 5")
+  }
+}
+```
+
+#### Execute the code so students can see the output
+
+The output should be "x is not equal to 5"
 
 ### **Else if statements**
 
 #### Say:
 
 > We can add as many conditional statements as we want. All we have to do is use the keyword `else if`.
+
+### **In-class Example**
+
+#### Say:
 
 > For example, let's say we want to check if x is greater than 10, less than 10, or equal to 10.
 
@@ -92,27 +116,83 @@ if x > 10 {
 
 > Let's break this down.
 
-> The first expression is checking if x is greater than 10. If true, then it will print out "x is greater than 10". If false, it will go to the next expression, which is checking if x is less than 10. Again, if true, then it will print out that statement, but if false, it will go to the last expression. The last expression is checking whether x is equal to 10. Let's execute this code and see what we get if we set x to equal 15.
+> The first expression is checking if x is greater than 10. If true, then it will print out "x is greater than 10". If false, it will go to the next expression, which is checking if x is less than 10. Again, if true, then it will print out that statement, but if false, it will go to the last expression. The last expression is checking whether x is equal to 10.
 
-#### Execute the code with x assigned to 15 so students can see the output, "x is greater than 10", printed in the console.
+> Let's execute this code and see what we get if we set x to equal 15.
+
+#### Add on to the code:
+
+```golang
+func main() {
+  x := 15
+
+	if x > 10 {
+		fmt.Println("x is greater than 10")
+	} else if x < 10 {
+		fmt.Println("x is less than 10")
+	} else if x == 10 {
+		fmt.Println("x is equal to 10")
+	}
+}
+```
+
+#### Execute the code so students can see the output
+
+The output should be "x is greater than 10"
 
 #### Say:
 
 > Okay now let's try a number that is less than 10, like 5.
 
-#### Change x to 5 and execute the code so it prints out the output, "x is less than 10".
+#### Change the value of x to 5:
+
+```golang
+func main() {
+  x := 5
+
+	if x > 10 {
+		fmt.Println("x is greater than 10")
+	} else if x < 10 {
+		fmt.Println("x is less than 10")
+	} else if x == 10 {
+		fmt.Println("x is equal to 10")
+	}
+}
+```
+
+#### Execute the code so students can see the output
+
+The output should be "x is less than 10"
 
 #### Say:
 
 > Now let's set x to equal 10
 
-#### Change x to 10 and execute the code so it prints out the output, "x is equal to 10".
+#### Change the value of x to 10:
+
+```golang
+func main() {
+  x := 10
+
+	if x > 10 {
+		fmt.Println("x is greater than 10")
+	} else if x < 10 {
+		fmt.Println("x is less than 10")
+	} else if x == 10 {
+		fmt.Println("x is equal to 10")
+	}
+}
+```
+
+#### Execute the code so students can see the output
+
+The output should be "x is equal to 10"
 
 #### Say:
 
 > We could've used an `else` statement too because if x is not greater or less than 10, then it must equal 10
 
-#### Modify the code:
+#### Change the last `else if` to `else`:
 
 ```golang
 if x > 10 {
@@ -124,13 +204,17 @@ if x > 10 {
 }
 ```
 
-#### Execute the code again with x still assigned to 10 so it prints out the output, "x is equal to 10".
+#### Execute the code so students can see the output
+
+The output should be "x is equal to 10"
 
 ### **Switch statements**
 
 #### Say:
 
 > But for complex conditionals, it is cleaner to use switch statements. A switch statement will run the first case equal to the condition expression. The cases are evaluated from the top down, and will stop once a case is executed. If none of the cases match, there is a default case that will be executed instead.
+
+### **In-class Example**
 
 > Let's write a switch statement now. Let's say a variable called 'month' is set to the numeric representation of a month. The switch statement will then print out the name of the month.
 
@@ -241,13 +325,27 @@ if x > 10 {
   month := 5
 ```
 
-#### Execute the code so it prints out the output, "May". Change the value of month and execute the code again so it prints out a different output.
+#### Execute the code so students can see the output.
+
+The output should be "May"
+
+#### Change the value of month and execute the code again so it prints out a different output.
 
 #### Say:
 
 > If we change the value of month to a number other than 1-12, it should hit the default case and print out "This is not a month". So let's try that now.
 
-#### Execute the code with month equal to 13 so it prints out the output, "This is not a month".
+#### Change the value of month to 13:
+
+```golang
+  month := 13
+```
+
+#### Execute the code so students can see the output
+
+The output should be "This is not a month"
+
+### **Coding Exercises**
 
 #### Say:
 
@@ -267,6 +365,8 @@ See if there are any volunteers. Have the student read their code aloud as you c
 
 > For these exercises, there could be multiple ways to express the condition, so if you have something that looks different from the way I'm coding it here, please share!
 
+### **Even/Odd Number Exercise**
+
 > For the first question, we need to determine whether the number is an even number. One way we can do this is by dividing it by 2 and checking if there is any remainder. If there isn't, then it is an even number.
 
 #### Type:
@@ -285,7 +385,18 @@ See if there are any volunteers. Have the student read their code aloud as you c
 
 > Your variable doesn't have to be x; it can be anything.
 
-> The way we can check for remainders is by using the modulus operator %, which is the percent sign. So here we are checking if x has any remainder when it is divided by 2. If there isn't any, then it prints out "This is an even number". Otherwise we can assume it is an odd number. You can test it out by plugging in other numbers for x.
+> The way we can check for remainders is by using the modulus operator %, which is the percent sign.
+
+> So here we are checking if x has any remainder when it is divided by 2. If there isn't any, then it prints out "This is an even number". Otherwise we can assume it is an odd number. You can test it out by plugging in other numbers for x.
+
+### **Execute the Coding Exercise**
+
+Change the value of x to an even number. The output should be "This is an even number".
+Change the value of x to an odd number. The output should be "This is an odd number".
+
+### **24-hour Clock Exercise**
+
+#### Say:
 
 > Next we worked on the 24-hour clock. Again you can call your variable whatever you'd like. I called it 'hour'.
 
@@ -307,7 +418,9 @@ See if there are any volunteers. Have the student read their code aloud as you c
 
 > Since my 'hour' variable is set at 7 right now, let's execute this to see if it will print out 'Good morning!"
 
-#### Execute the code so it prints out the output, "Good morning!"
+### **Execute the Coding Exercise**
+
+The output should be "Good morning!"
 
 #### Say:
 
@@ -316,7 +429,11 @@ See if there are any volunteers. Have the student read their code aloud as you c
 #### Add on to the code:
 
 ```golang
-else if hour >= 13 && hour <= 18 {
+	hour := 15
+
+	if hour >= 6 && hour <= 12 {
+		fmt.Println("Good morning!")
+	} else if hour >= 13 && hour <= 18 {
 		fmt.Println("Good afternoon!")
 	}
 ```
@@ -327,16 +444,24 @@ else if hour >= 13 && hour <= 18 {
 
 > Let's change the 'hour' variable to 15 and execute the code.
 
-#### Execute the code so it prints out the output, "Good afternoon!"
+### **Execute the Coding Exercise**
+
+The output should be "Good afternoon!"
 
 #### Say:
 
 > Good! It's working so far. Now one way we can check for the other two conditions is by choosing which one is easier to check for. I think it is easier to check whether the 'hour' is invalid, meaning it is greater than 24. So that's what my next `else if` expression is checking for.
 
-#### Type:
+#### Add on to the code:
 
 ```golang
-else if hour >= 24 {
+	hour := 30
+
+	if hour >= 6 && hour <= 12 {
+		fmt.Println("Good morning!")
+	} else if hour >= 13 && hour <= 18 {
+		fmt.Println("Good afternoon!")
+	} else if hour >= 24 {
 		fmt.Println("Please use a number between 0 and 23")
 	}
 ```
@@ -345,7 +470,9 @@ else if hour >= 24 {
 
 > Let's go ahead an change the 'hour' variable to a bigger number, like 30, and execute the code.
 
-#### Execute the code so it prints out the output, "Please use a number between 0 and 23"
+### **Execute the Coding Exercise**
+
+The output should be "Please use a number between 0 and 23
 
 #### Say:
 
@@ -354,7 +481,15 @@ else if hour >= 24 {
 #### Type:
 
 ```golang
-else {
+	hour := 20
+
+	if hour >= 6 && hour <= 12 {
+		fmt.Println("Good morning!")
+	} else if hour >= 13 && hour <= 18 {
+		fmt.Println("Good afternoon!")
+	} else if hour >= 24 {
+		fmt.Println("Please use a number between 0 and 23")
+	} else {
 		fmt.Println("Good night!")
 	}
 ```
@@ -363,7 +498,9 @@ else {
 
 > Let's test this out and change the 'hour' variable to 20 and execute the code.
 
-#### Execute the code so it prints out the output, "Good night!"
+### **Execute the Coding Exercise**
+
+The output should be "Good night!"
 
 #### Say:
 
@@ -377,6 +514,10 @@ See if there are any volunteers. Have them share their code and see different wa
 
 > Have you heard of DRY? It stands for "Don't Repeat Yourself" and basically you want to code so that you're not being repetitive and unnecessarily long in your coding.
 
+### **World Greeting Exercise**
+
+#### Say:
+
 > Anyway for the last exercise, it required a little bit of outside knowledge regarding world languages. If you couldn't think of any off the top of your head, you were welcome to use Google Translate.
 
 > First we need to declare a variable, which I called language, and set it to any language.
@@ -384,14 +525,14 @@ See if there are any volunteers. Have them share their code and see different wa
 #### Type:
 
 ```golang
-language := French
+language := "French"
 ```
 
 #### Say:
 
 > Next we need to set up the switch statement. So first we use the keyword `switch` and then whatever we are checking for, which is the language.
 
-#### Type:
+#### Add on to the code:
 
 ```golang
 switch language {
@@ -431,7 +572,7 @@ switch language {
 
 #### Say:
 
-> Perfect! Finally we need to have a default case, just in case the language isn't one of the three you chose. So let's add the default case and have it return "Hello" in English.
+> Perfect! Finally we need to have a default case, just in case the language isn't one of the three you chose. So let's add the default case and have it return "I don't recognize that language" in English.
 
 #### Add on to the code:
 
@@ -444,7 +585,7 @@ switch language {
 	case "Japanese":
 		fmt.Println("Konnichiwa!")
 	default:
-		fmt.Println("Hello!")
+		fmt.Println("I don't recognize that language")
 	}
 ```
 
@@ -452,16 +593,24 @@ switch language {
 
 > Alright now let's test it out by changing the language to "Korean"
 
-#### Execute the code so students can see results printed in the console.
+### **Execute the Coding Exercise**
+
+The output should be "An-nyoung!"
 
 #### Say:
 
 > Let's try a language that isn't one of the three cases, like "German".
 
-#### Execute the code so students can see results printed in the console.
+### **Execute the Coding Exercise**
+
+The output should be "I don't recognize that language"
 
 #### Say:
 
 > Does anyone have any questions?
+
+### **Conclusion**
+
+#### Say:
 
 > Conditional statements are crucial in programming and is used in any programming language you may learn in the future. What we learned today was just the basics. These can become very complex, but as long as you can understand the logical flow of information, you will be able to use it in your code.

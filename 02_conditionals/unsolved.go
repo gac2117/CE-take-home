@@ -14,6 +14,6 @@ func main() {
 	// Create a switch statement that will take in one parameter of a string, that is a language name. Decare and assign the variable.
 	// Choose three languages that you know how to say "Hello" in. You can use Google Translator if needed.
 	// Create a case for each of the three language and have it print out "Hello!" in that language.
-	// The default case can return "Hello!" in English.
+	// The default case can return "I don't recognize that language" in English.
 
 }
