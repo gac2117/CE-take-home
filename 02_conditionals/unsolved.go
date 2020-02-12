@@ -1,5 +1,10 @@
 package main
 
+// Be sure to import "fmt" by uncommenting the following lines:
+// import (
+// 	"fmt"
+// )
+
 func main() {
 	// Create a if/else statement that will take in one parameter of a number. Declare and assign the variable.
 	// If the number is an even number, print out the message "This is an even number".

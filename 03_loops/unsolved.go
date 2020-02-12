@@ -1,5 +1,10 @@
 package main
 
+// Be sure to import "fmt" by uncommenting the following lines:
+// import (
+// 	"fmt"
+// )
+
 func main() {
 	// Create a for loop that will print out the sum of the numbers between 15 and 25.
 	// Hint: declare a variable called 'sum' outside of the for loop to keep track of the sum.
