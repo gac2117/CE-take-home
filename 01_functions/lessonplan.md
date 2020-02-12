@@ -120,6 +120,8 @@ func main() {
 
 #### Execute the code so students can see the output
 
+The output should be "Happy birthday John"
+
 ### **In-class Example (math)**
 
 #### Say:
@@ -172,6 +174,8 @@ func main() {
 ```
 
 #### Execute the code so students can see the output
+
+The output should be 9
 
 ### **Coding Exercises**
 
@@ -318,6 +322,14 @@ func main() {
 ```
 
 #### Execute the code so students can see the output
+
+The output should be:
+Hello, my name is John. I live in New York City and I am a banker.
+I am 40 years old.
+Hello, my name is Sam. I live in Miami and I am a surfer.
+I am 29 years old.
+Hello, my name is Jane. I live in San Francisco and I am a software developer.
+I am 34 years old.
 
 #### Say:
 
