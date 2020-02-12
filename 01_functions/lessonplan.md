@@ -36,7 +36,7 @@ func function_name(parameterName type)
 
 > After the closing parentheses, if the function returns any values, you need to write the _data type of the return value_.
 
-#### Add the word _type_ to the code already written:
+#### Add on to the code:
 
 ```golang
 func nameOfFunction(parameters type) type
@@ -46,7 +46,7 @@ func nameOfFunction(parameters type) type
 
 > Then open a set of curly brackets. Inside the brackets, you will write the code for the function.
 
-#### Add {} to the code:
+#### Add on to the code:
 
 ```golang
 func nameOfFunction(parameters type) type {
@@ -58,7 +58,7 @@ func nameOfFunction(parameters type) type {
 
 > If the function has a return value, make sure you use the keyword `return` and then the _value_ that is being returned.
 
-#### Add the word _return_ to the code:
+#### Add on to the code:
 
 ```golang
 func nameOfFunction(parameters type) type {
@@ -118,7 +118,7 @@ func main() {
 }
 ```
 
-#### Execute the code so students can see "Happy Birthday John" printed in the console.
+#### Execute the code so students can see the output
 
 ### **In-class Example (math)**
 
@@ -171,9 +171,9 @@ func main() {
 }
 ```
 
-#### Execute the code so students can see the sum, 9, printed in the console.
+#### Execute the code so students can see the output
 
-### **Coding Activities**
+### **Coding Exercises**
 
 #### Say:
 
@@ -317,7 +317,7 @@ func main() {
 }
 ```
 
-#### Execute the code so students can see results printed in the console.
+#### Execute the code so students can see the output
 
 #### Say:
 
