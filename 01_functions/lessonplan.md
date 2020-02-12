@@ -1,17 +1,19 @@
 # Lesson Plan for Golang - Functions
 
-This lesson assumes students already have some knowledge of Go basic data types and variables.
+This lesson assumes students already have some knowledge of Go basics, such as data types, variables, packages.
 
 ## Materials
 
 - Lesson plan
 - Text editor that is projected on a screen
-- In-class example
-- Coding activity
+- In-class examples
+- Coding activities
 
 ## Instructor Demo (5 mins)
 
 The lesson plan format is divided into two parts: speaking and coding. For some parts, it is advised that the instructor will code as s/he is speaking.
+
+### **Syntax**
 
 #### Say:
 
@@ -64,6 +66,8 @@ func nameOfFunction(parameters type) type {
 }
 ```
 
+### **In-class Example (string)**
+
 #### Say:
 
 > Let's do an example now.
@@ -102,7 +106,9 @@ func birthday(name string) string {
 
 #### Say:
 
-> Now in the main function, we will print out on to the screen what this 'birthday' function returns. So we will write
+> Now, this alone won't do anything. As you know, in Golang, the main package is a special package which is used with the programs that are executable and this package contains the `main()` function. The `main()` function is a special type of function and it is the entry point of the executable programs. It does not take any argument nor return anything.
+
+> In order for us to execute this code, we need to put it in the `main()` function. This will print out on to the screen what this 'birthday' function returns. So we will write
 
 #### Type:
 
@@ -114,12 +120,14 @@ func main() {
 
 #### Execute the code so students can see "Happy Birthday John" printed in the console.
 
+### **In-class Example (math)**
+
 #### Say:
 
 > We can also write functions to do math for us.
 > Let's say we want to create a function that will do simple addition.
 
-> First we will declare the function by using the keyword `func` and then the name of the function, "addThis". The function will take in two parameters which are numbers, so we will type
+> First we will declare the function by using the keyword `func` and then the name of the function, so let's call it "addThis". The function will take in two parameters, which are numbers that we are going to add together, so we will type
 
 #### As you type:
 
@@ -129,7 +137,7 @@ func addThis(num1, num2 int)
 
 #### Say:
 
-> This function will return the sum of these two numbers, so we need to add the return type of an integer and then open up the curly brackets.
+> This function will return the sum of these two numbers, so we need to add the return type of an integer and then let's open up the curly brackets.
 
 #### Add on to the code:
 
@@ -141,7 +149,7 @@ func addThis(num1, num2 int) int {
 
 #### Say:
 
-> We want to return the sum of _num1_ and _num2_, so we can type _num1_ and then the plus sign and then _num2_.
+> Inside the body of this function, we want to return the sum of _num1_ and _num2_, so we can type _num1_ and then the plus sign and then _num2_.
 
 #### As you type:
 
@@ -153,7 +161,7 @@ func addThis(num1, num2 int) int {
 
 #### Say:
 
-> In order to execute this code, we need to add it to the main function, so let's go ahead and do that
+> In order to execute this code, remember we need to add it to the `main()` function, so let's go ahead and do that
 
 #### Add on to the code:
 
@@ -165,9 +173,11 @@ func main() {
 
 #### Execute the code so students can see the sum, 9, printed in the console.
 
+### **Coding Activities**
+
 #### Say:
 
-> Now you are going to write a few functions on your own. Open up the assignment and you will see instructions on what the functions will need to do and return. You have 15 minutes to complete the assignment.
+> Now you are going to write a few functions on your own. Open up the assignment and you will see instructions on what the functions will need to do and return. You have 15 minutes to complete the assignment. If you get stuck, please raise your hand and I will go help you.
 
 As the students are coding, walk around the classroom to make sure no one is stuck.
 
@@ -175,13 +185,19 @@ As the students are coding, walk around the classroom to make sure no one is stu
 
 #### Say:
 
-> That was a simple assignment. How did you do? Would anyone like to share their solution code?
+> That was a simple assignment! How did you do? Would anyone like to share their solution code?
 
-See if there are any volunteers. Have the student read their code aloud as you code it into your text editor for everyone to see. Execute the code to see if it works. Thank the student who volunteered.
+See if there are any volunteers. Have the student read his/her code aloud as you code it into your text editor for everyone to see. Execute the code to see if it works. Thank the student who volunteered.
 
 #### Say:
 
-> Let's go over the solution code together. First of all, we have the function called 'greeting' that accepts 3 parameters. You can name the parameters whatever you want but make sure they are strings.
+> Let's go over the solution code together.
+
+### **Greeting Function Exercise**
+
+#### Say:
+
+> First of all, we have the function called 'greeting' that accepts 3 parameters. You can name the parameters whatever you want but make sure they are strings.
 
 #### Type:
 
@@ -202,6 +218,7 @@ func greeting(name, city, job string)
 #### Say:
 
 > As you can see, you can list the parameters separated by commas as long as they are of the same type.
+
 > Next we need to specify that the return value will be a string.
 
 #### Type:
@@ -222,21 +239,25 @@ func greeting(name, city, job string) string {
 }
 ```
 
+### **getAge Function Exercise**
+
 #### Say:
 
-> For the next function, you had to use an integer converter to change the number into a string. But first, we need to declare the function
+> For the next function, you had to use an integer converter to change the number into a string, which was new! But I hope you were able to figure it out. In this field, you will be thrown new things all the time, so instead of getting flustered, you need to try to understand it, learn it, and use it!
+
+> So first, we need to declare the function. The function name was getAge and it takes in a parameter of a birth year, which is a number or integer. And finally it will return a string.
 
 #### Type:
 
 ```golang
-func age(birthyear int) string {
+func getAge(birthyear int) string {
 
 }
 ```
 
 #### Say:
 
-> There are different ways you can do this, but the simplest way is to declare the variable 'age' and set it to the difference between the birth year and the current year. So that can be done with simple subtraction
+> There are different ways you can do this, but the simplest way I think is to declare a variable called 'age' and set it to the difference between the birth year and the current year. So that can be done with simple subtraction
 
 #### Type:
 
@@ -277,9 +298,11 @@ func age(birthyear int) string {
 }
 ```
 
+### **Execute the Coding Exercises**
+
 #### Say:
 
-> Now to print everything out, we need to call these functions in the main function. Remember we had to use different parameters for each of the three times we call these functions.
+> Now to print everything out, we need to call these functions in the `main()` function. Remember we had to use different parameters for each of the three times we call these functions.
 
 #### Type:
 
@@ -299,4 +322,11 @@ func main() {
 #### Say:
 
 > The results look like three different people giving their self-introductions!
+
+> Does anyone have any questions?
+
+### **Conclusion**
+
+#### Say:
+
 > As you can see, using functions will help us do the same task multiple times easily. We will continue to use functions all throughout this course. They will become more and more complex but this is a good start.

@@ -11,21 +11,22 @@ func greeting(name, city, job string) string {
 	return "Hello, my name is " + name + ". I live in " + city + " and I am a " + job + "."
 }
 
-// Create a function called 'age' that will take in one parameter: birthyear.
+// Create a function called 'getAge' that will take in one parameter: a birth year.
 // The function must return a string that says "I am _____ years old."
-// In order to convert the integer into a string, you must use strconv.Itoa(num). For example, i := strconv.Itoa(10) will return a string of "10".
+// Hint: In order to convert the integer into a string, you must use strconv.Itoa(num).
+// For example, i := strconv.Itoa(10) will assign a string of "10" to i.
 
-func age(birthyear int) string {
+func getAge(birthyear int) string {
 	age := strconv.Itoa(2020 - birthyear)
 	return "I am " + age + " years old."
 }
 
-// Call the function 'greeting' and 'age' three times using different parameters.
+// Call the function 'greeting' and 'getAge' three times using different parameters each time.
 func main() {
 	fmt.Println(greeting("John", "New York City", "banker"))
-	fmt.Println(age(1980))
+	fmt.Println(getAge(1980))
 	fmt.Println(greeting("Sam", "Miami", "surfer"))
-	fmt.Println(age(1991))
+	fmt.Println(getAge(1991))
 	fmt.Println(greeting("Jane", "San Francisco", "software developer"))
-	fmt.Println(age(1986))
+	fmt.Println(getAge(1986))
 }
