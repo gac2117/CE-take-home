@@ -183,7 +183,7 @@ The output should be 9
 
 > Now you are going to write a few functions on your own. Open up the assignment and you will see instructions on what the functions will need to do and return. You have 15 minutes to complete the assignment. If you get stuck, please raise your hand and I will go help you.
 
-As the students are coding, walk around the classroom to make sure no one is stuck.
+As the students are coding, walk around the classroom to make sure no one is struggling.
 
 ## Instructor Review (10 mins)
 
