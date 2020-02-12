@@ -1,6 +1,6 @@
 # Lesson Plan for Golang - Conditionals
 
-This lesson assumes students already have some knowledge of Go basic data types, variables, functions, and logical operators.
+This lesson assumes students already have some knowledge of Go basics, such as basic data types, variables, functions, and logical operators.
 
 ## Materials
 
@@ -40,15 +40,16 @@ if x == 5 {
 #### As you say:
 
 > Let's set a variable called x to the number 5.
+
 > To start the if/else statement, we use the keyword `if`. Then we write the expression that we want to evaluate as either true or false. So in our case, we want to know if x is equal to 5.
 
-> If it is true, then inside the curly brackets, write what should happen. For us, we want to print out the string "x is equal to 5".
+> If it is true, then inside the curly brackets, we will write what should happen. For us, we want to print out the string "x is equal to 5".
 
-> If the expression is false, meaning x does not equal 5, then we use the keyword `else`. Then in the curly brackets we execute a different action. For us, we want to print out the string "x is not equal to 5".
+> If the expression is false, meaning x does not equal 5, then we use the keyword `else`. Then in the curly brackets we execute a different action. In our case, we want to print out the string "x is not equal to 5".
 
 > Now let's execute this inside the main function
 
-#### Type:
+#### Add on to the code:
 
 ```golang
 func main() {
@@ -112,11 +113,13 @@ if x > 10 {
 }
 ```
 
-#### Say:
+#### As you say:
 
-> Let's break this down.
+> The first expression is checking if x is greater than 10. If true, then it will print out "x is greater than 10".
 
-> The first expression is checking if x is greater than 10. If true, then it will print out "x is greater than 10". If false, it will go to the next expression, which is checking if x is less than 10. Again, if true, then it will print out that statement, but if false, it will go to the last expression. The last expression is checking whether x is equal to 10.
+> If false, it will go to the next expression, which is checking if x is less than 10. Again, if true, then it will print out that statement, but if false, it will go to the last expression.
+
+> The last expression is checking whether x is equal to 10.
 
 > Let's execute this code and see what we get if we set x to equal 15.
 
@@ -206,7 +209,7 @@ if x > 10 {
 
 #### Execute the code so students can see the output
 
-The output should be "x is equal to 10"
+The output should still be "x is equal to 10"
 
 ### **Switch statements**
 
@@ -215,6 +218,8 @@ The output should be "x is equal to 10"
 > But for complex conditionals, it is cleaner to use switch statements. A switch statement will run the first case equal to the condition expression. The cases are evaluated from the top down, and will stop once a case is executed. If none of the cases match, there is a default case that will be executed instead.
 
 ### **In-class Example**
+
+#### Say:
 
 > Let's write a switch statement now. Let's say a variable called 'month' is set to the numeric representation of a month. The switch statement will then print out the name of the month.
 
@@ -349,9 +354,9 @@ The output should be "This is not a month"
 
 #### Say:
 
-> Now you are going to write a few conditional statements on your own. Open up the assignment and you will see instructions on what kind of conditionals you will need to write. You have 20 minutes to complete the assignment.
+> Now you are going to write a few conditional statements on your own. Open up the assignment and you will see instructions on what kind of conditionals you will need to write. You have 20 minutes to complete the assignment. If you get stuck, please raise your hand and I will go help you.
 
-As the students are coding, walk around the classroom to make sure no one is stuck.
+As the students are coding, walk around the classroom to make sure no one is struggling.
 
 ## Instructor Review (10 mins)
 
@@ -359,7 +364,7 @@ As the students are coding, walk around the classroom to make sure no one is stu
 
 > How did you do? Would anyone like to share their solution code?
 
-See if there are any volunteers. Have the student read their code aloud as you code it into your text editor for everyone to see. Execute the code to see if it works. Thank the student who volunteered.
+See if there are any volunteers. Have the student read his/her code aloud as you code it into your text editor for everyone to see. Execute the code to see if it works. Thank the student who volunteered.
 
 #### Say:
 
@@ -367,7 +372,7 @@ See if there are any volunteers. Have the student read their code aloud as you c
 
 ### **Even/Odd Number Exercise**
 
-> For the first question, we need to determine whether the number is an even number. One way we can do this is by dividing it by 2 and checking if there is any remainder. If there isn't, then it is an even number.
+> For the first exercise, we need to determine whether the number is an even number or odd number. One way we can do this is by dividing it by 2 and checking if there is any remainder. If there isn't, then it is an even number.
 
 #### Type:
 
@@ -392,6 +397,7 @@ See if there are any volunteers. Have the student read their code aloud as you c
 ### **Execute the Coding Exercise**
 
 Change the value of x to an even number. The output should be "This is an even number".
+
 Change the value of x to an odd number. The output should be "This is an odd number".
 
 ### **24-hour Clock Exercise**
@@ -402,7 +408,7 @@ Change the value of x to an odd number. The output should be "This is an odd num
 
 > The first condition we want to check is whether the hour is between 6 and 12. In order to do this, we would need to use Logical AND Operator, which is represented by two ampersands &&, as well as the math symbols for greater than >, lesser than <, and equal to =.
 
-#### Type:
+#### As you type:
 
 ```golang
 	hour := 7
@@ -476,9 +482,9 @@ The output should be "Please use a number between 0 and 23
 
 #### Say:
 
-> Alright, finally we will check for the last condition, which is whether the hour is between 0 and 5 or 19 and 23. That would've been harder to code using logical operators, so let's just use the `else` statement for that.
+> Alright, finally we will check for the last condition, which is whether the hour is between 0 and 5 or 19 and 23. That is hard to code using logical operators, so let's just use the `else` statement for that.
 
-#### Type:
+#### Add on to the code:
 
 ```golang
 	hour := 20
@@ -520,7 +526,7 @@ See if there are any volunteers. Have them share their code and see different wa
 
 > Anyway for the last exercise, it required a little bit of outside knowledge regarding world languages. If you couldn't think of any off the top of your head, you were welcome to use Google Translate.
 
-> First we need to declare a variable, which I called language, and set it to any language.
+> First we need to declare a variable, which I called 'language', and set it to any language. I set mine to 'French'.
 
 #### Type:
 
@@ -572,7 +578,7 @@ switch language {
 
 #### Say:
 
-> Perfect! Finally we need to have a default case, just in case the language isn't one of the three you chose. So let's add the default case and have it return "I don't recognize that language" in English.
+> Perfect! Finally we need to have a default case, just in case the language isn't one of the three you chose. So let's add the default case and have it return "I don't recognize that language".
 
 #### Add on to the code:
 
