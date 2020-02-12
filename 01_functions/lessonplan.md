@@ -13,7 +13,7 @@ This lesson assumes students already have some knowledge of Go basics, such as d
 
 The lesson plan format is divided into two parts: speaking and coding. For some parts, it is advised that the instructor will code as s/he is speaking.
 
-### **Syntax**
+### **Syntax for Functions**
 
 #### Say:
 
@@ -56,7 +56,7 @@ func nameOfFunction(parameters type) type {
 
 #### Say:
 
-> If the function has a return value, make sure you use the keyword `return` and then the _value_ that is being returned.
+> If the function has a return value, make sure you use the keyword `return` and then the _value_ that is being returned. The value should be the data type that we specified earlier.
 
 #### Add on to the code:
 
@@ -70,8 +70,8 @@ func nameOfFunction(parameters type) type {
 
 #### Say:
 
-> Let's do an example now.
-> If I have a function called 'birthday' and it takes in a parameter of someone's name which is a string, then I would type
+> Let's do an example now. Let's create a function that will take in a person's name and return "Happy Birthday \_\_\_!"
+> So let's call the function 'birthday' and it takes in a parameter of someone's name which is a string.
 
 #### Type:
 
@@ -151,7 +151,7 @@ func addThis(num1, num2 int) int {
 
 #### Say:
 
-> Inside the body of this function, we want to return the sum of _num1_ and _num2_, so we can type _num1_ and then the plus sign and then _num2_.
+> Inside the body of this function, we want to return the sum of _num1_ and _num2_, so we can type _num1_ and then the plus sign and then _num2_. This will add the two numbers and return the sum.
 
 #### As you type:
 
@@ -189,7 +189,7 @@ As the students are coding, walk around the classroom to make sure no one is stu
 
 #### Say:
 
-> That was a simple assignment! How did you do? Would anyone like to share their solution code?
+> That wasn't too hard, right? How did you do? Would anyone like to share their solution code?
 
 See if there are any volunteers. Have the student read his/her code aloud as you code it into your text editor for everyone to see. Execute the code to see if it works. Thank the student who volunteered.
 
@@ -233,7 +233,7 @@ func greeting(name, city, job string) string
 
 #### Say:
 
-> Open the curly brackets and return the concatenated string. Make sure to have spaces in between the words!
+> Open a set of curly brackets and return the concatenated string. Make sure to have spaces in between the words!
 
 #### Type:
 
@@ -247,7 +247,7 @@ func greeting(name, city, job string) string {
 
 #### Say:
 
-> For the next function, you had to use an integer converter to change the number into a string, which was new! But I hope you were able to figure it out. In this field, you will be thrown new things all the time, so instead of getting flustered, you need to try to understand it, learn it, and use it!
+> For the next function, you had to use an integer converter to change the number into a string, which was new! But I hope you were able to figure it out. In the field of software development, you will be thrown new things all the time, so instead of getting flustered, you need to try to understand it, learn it, and use it!
 
 > So first, we need to declare the function. The function name was getAge and it takes in a parameter of a birth year, which is a number or integer. And finally it will return a string.
 
@@ -259,9 +259,11 @@ func getAge(birthyear int) string {
 }
 ```
 
+t
+
 #### Say:
 
-> There are different ways you can do this, but the simplest way I think is to declare a variable called 'age' and set it to the difference between the birth year and the current year. So that can be done with simple subtraction
+> There are different ways you can do this, but I think the simplest way is to declare a variable called 'age' and set it to the difference between the birth year and the current year. So that can be done with simple subtraction
 
 #### Type:
 
@@ -280,6 +282,8 @@ age := strconv.Itoa(2020-birthyear)
 ```
 
 #### Say:
+
+> Now the variable 'age' is set to the string representation of the difference between 2020 and the birth year.
 
 > Finally we need to return the string that includes this age.
 
@@ -324,11 +328,17 @@ func main() {
 #### Execute the code so students can see the output
 
 The output should be:
+
 Hello, my name is John. I live in New York City and I am a banker.
+
 I am 40 years old.
+
 Hello, my name is Sam. I live in Miami and I am a surfer.
+
 I am 29 years old.
+
 Hello, my name is Jane. I live in San Francisco and I am a software developer.
+
 I am 34 years old.
 
 #### Say:
