@@ -26,7 +26,7 @@ The lesson plan format is divided into two parts: speaking and coding. For some 
 #### Type the following code in the text editor:
 
 ```golang
-func function_name(parameterName type)
+func functionName(parameterName type)
 ```
 
 #### As you say:
@@ -39,7 +39,7 @@ func function_name(parameterName type)
 #### Add on to the code:
 
 ```golang
-func nameOfFunction(parameters type) type
+func functionName(parameterName type)
 ```
 
 #### Say:
@@ -49,7 +49,7 @@ func nameOfFunction(parameters type) type
 #### Add on to the code:
 
 ```golang
-func nameOfFunction(parameters type) type {
+func funcationName(parameterName type) type {
   // function body code
 }
 ```
@@ -61,7 +61,7 @@ func nameOfFunction(parameters type) type {
 #### Add on to the code:
 
 ```golang
-func nameOfFunction(parameters type) type {
+func functionName(parameterName type) type {
   return value
 }
 ```
@@ -317,11 +317,11 @@ func age(birthyear int) string {
 ```golang
 func main() {
 	fmt.Println(greeting("John", "New York City", "banker"))
-	fmt.Println(age(1980))
+	fmt.Println(getAge(1980))
 	fmt.Println(greeting("Sam", "Miami", "surfer"))
-	fmt.Println(age(1991))
+	fmt.Println(getAge(1991))
 	fmt.Println(greeting("Jane", "San Francisco", "software developer"))
-	fmt.Println(age(1986))
+	fmt.Println(getAge(1986))
 }
 ```
 
